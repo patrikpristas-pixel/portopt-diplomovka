@@ -1,0 +1,24 @@
+﻿portfólio,stratégia,Sharpe,Sortino,Calmar,MaxDD,ann_return,NAV_eur
+Agresívne,AI (NN),0.591,0.799,0.434,-0.42,0.144,52451.0
+Agresívne,equal_weight,0.776,0.979,0.581,-0.325,0.1888,44142.0
+Agresívne,markowitz,0.764,1.063,0.672,-0.287,0.1926,44166.0
+Agresívne,black_litterman,0.811,1.096,0.699,-0.294,0.2057,48868.0
+Agresívne,momentum,0.622,0.834,0.458,-0.364,0.1666,39782.0
+Agresívne,SPY,0.419,0.52,0.226,-0.337,0.0762,29022.0
+Vyvážené,AI (NN),0.38,0.48,0.314,-0.292,0.0645,34310.0
+Vyvážené,markowitz,0.407,0.559,0.232,-0.235,0.0546,25701.0
+Vyvážené,black_litterman,0.552,0.735,0.404,-0.201,0.0811,27423.0
+Vyvážené,momentum,0.497,0.655,0.312,-0.352,0.1101,29317.0
+Vyvážené,SPY,0.419,0.52,0.226,-0.337,0.0762,29022.0
+Konzervatívne,AI (NN),0.603,0.792,0.494,-0.295,0.1235,39487.0
+Konzervatívne,equal_weight,0.624,0.807,0.403,-0.221,0.089,30094.0
+Konzervatívne,markowitz,0.369,0.49,0.18,-0.236,0.0426,24604.0
+Konzervatívne,black_litterman,0.333,0.431,0.167,-0.233,0.0389,24261.0
+Konzervatívne,momentum,0.743,1.002,0.598,-0.309,0.1847,34230.0
+Konzervatívne,SPY,0.419,0.52,0.226,-0.337,0.0762,29022.0
+All-Weather,AI (NN),0.49,0.635,0.409,-0.33,0.1017,37812.0
+All-Weather,equal_weight,0.727,0.95,0.547,-0.229,0.1253,33576.0
+All-Weather,markowitz,0.587,0.774,0.459,-0.18,0.0827,28575.0
+All-Weather,black_litterman,0.533,0.699,0.397,-0.194,0.0769,28117.0
+All-Weather,momentum,0.604,0.816,0.431,-0.33,0.1424,33172.0
+All-Weather,SPY,0.419,0.52,0.226,-0.337,0.0762,29022.0

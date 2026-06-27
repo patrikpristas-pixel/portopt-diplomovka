@@ -1,0 +1,5 @@
+﻿portfolio,n_trials,n_days_search,PBO,PBO_pct,n_combinations,logit_median
+Agresívne,400,1258,0.9187,91.9,3432,-2.841
+Vyvážené,200,1258,0.7413,74.1,3432,-1.259
+Konzervatívne,110,1258,0.7101,71.0,3432,-1.161
+All-Weather,100,1258,0.873,87.3,3432,-1.889
