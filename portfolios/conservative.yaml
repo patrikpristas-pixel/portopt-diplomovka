@@ -1,0 +1,33 @@
+name: conservative
+display_name: "🛡️ Konzervatívne (Income + Defenzívne)"
+description: "5 dlhopisov + 5 defenzívnych akcií + 2 quality mega-caps + 3 zlato/safe-haven. 15 tickerov, nízke riziko."
+tickers:
+  # Bonds — full ladder (5)
+  - TLT  # 20+y Treasuries (max duration)
+  - IEF  # 7-10y Treasuries (intermediate)
+  - LQD  # Investment grade corporate
+  - HYG  # High yield corporate
+  - AGG  # Aggregate bond market
+  # Defensive consumer + healthcare (5)
+  - JNJ
+  - PFE
+  - PG
+  - KO
+  - WMT
+  # Quality mega-caps with strong dividends (2)
+  - AAPL
+  - MSFT
+  # Gold / safe-haven (3 — inflation hedge)
+  - NEM
+  - AEM
+  - FCX
+
+defaults:
+  date_range:
+    start: "2013-01-01"
+    end: "2022-12-31"
+  max_weight: 0.20
+  monthly_deposit_eur: 200
+  min_holding_period_days: 252
+  rebalance_freq: "monthly"
+  win_criterion: "total_return"

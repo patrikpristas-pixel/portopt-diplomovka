@@ -1,0 +1,15 @@
+{
+  "lookback": 60,
+  "horizon": 63,
+  "stride": 10,
+  "epochs": 80,
+  "lr": 0.002371707297862876,
+  "hidden": 256,
+  "n_layers": 1,
+  "dropout": 0.1,
+  "batch_size": 64,
+  "weight_decay": 2.145584375101421e-05,
+  "entropy_bonus": 0.05,
+  "early_stop_patience": 10,
+  "seed": 3561
+}

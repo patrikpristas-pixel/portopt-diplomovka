@@ -1,0 +1,37 @@
+name: balanced
+display_name: "⚖️ Vyvážené (All-Sector 60/40)"
+description: "Široký mix všetkých 7 sektorov + 2 dlhopisové ETF. 16 tickerov, klasický diverzifikovaný core."
+tickers:
+  # Tech (3)
+  - AAPL
+  - MSFT
+  - GOOGL
+  # Banks (2)
+  - JPM
+  - BAC
+  # Healthcare (2)
+  - JNJ
+  - PFE
+  # Consumer Staples (3)
+  - PG
+  - KO
+  - WMT
+  # Energy (2)
+  - XOM
+  - CVX
+  # Mining / Materials (2)
+  - NEM
+  - FCX
+  # Bonds (2)
+  - TLT
+  - IEF
+
+defaults:
+  date_range:
+    start: "2013-01-01"
+    end: "2022-12-31"
+  max_weight: 0.20
+  monthly_deposit_eur: 200
+  min_holding_period_days: 252
+  rebalance_freq: "monthly"
+  win_criterion: "total_return"

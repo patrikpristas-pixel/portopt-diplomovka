@@ -1,0 +1,33 @@
+name: aggressive
+display_name: "🚀 Agresívne (Growth Multi-Sector)"
+description: "Tech-tilt + cyklické banky/mining/energy + healthcare ballast. 14 tickerov, vysoké riziko."
+tickers:
+  # Tech mega-caps (6)
+  - AAPL
+  - MSFT
+  - GOOGL
+  - NVDA
+  - META
+  - AMZN
+  # Banks (2)
+  - JPM
+  - BAC
+  # Mining / Materials (2)
+  - NEM
+  - FCX
+  # Energy (2)
+  - XOM
+  - CVX
+  # Defensive ballast — healthcare (2)
+  - JNJ
+  - PFE
+
+defaults:
+  date_range:
+    start: "2013-01-01"
+    end: "2022-12-31"
+  max_weight: 0.20
+  monthly_deposit_eur: 200
+  min_holding_period_days: 252
+  rebalance_freq: "monthly"
+  win_criterion: "total_return"

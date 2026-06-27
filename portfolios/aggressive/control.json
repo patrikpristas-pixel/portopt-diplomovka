@@ -1,0 +1,19 @@
+{
+  "running": false,
+  "ts": "2026-06-22 13:15:45.711826",
+  "portfolio": "aggressive",
+  "scenario_id": "03dba391",
+  "n_trials": 100,
+  "n_completed_in_run": 100,
+  "knobs": {
+    "max_weight": 0.2,
+    "monthly_deposit_eur": 200.0,
+    "win_criterion": "total_return",
+    "date_start": "2013-01-01",
+    "date_end": "2022-12-31",
+    "test_window_months": 12,
+    "holdout_years": 3
+  },
+  "seed_hp": null,
+  "seed_label": null
+}

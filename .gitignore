@@ -1,0 +1,36 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# --- Trained model weights (6.4 GB; reproducible from code + seed) ---
+*.pt
+*.pth
+*.ckpt
+
+# --- Notebooks / IDE / OS ---
+.ipynb_checkpoints/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+runs/
+tb_logs/
+*.log
+
+# NOTE: data/ a portfolios/*.parquet sa ZAMERNE commituju —
+# tvoria datovy snapshot a vystupy potrebne na reprodukciu vysledkov.

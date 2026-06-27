@@ -1,0 +1,10 @@
+{
+  "max_weight": 0.2,
+  "monthly_deposit_eur": 200.0,
+  "win_criterion": "total_return",
+  "date_start": "2013-01-01",
+  "date_end": "2022-12-31",
+  "test_window_months": 4,
+  "holdout_years": 3,
+  "use_vix": true
+}

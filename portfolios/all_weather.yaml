@@ -1,0 +1,32 @@
+name: all_weather
+display_name: "🌐 All-Weather (Ray Dalio štýl)"
+description: "Multi-asset portfólio pre všetky obdobia — akcie, dlhopisy, zlato, komodity. 13 tickerov, vyvážené ako Bridgewater All-Weather fond."
+tickers:
+  # Stocks (~30%): broad sector mix (6)
+  - AAPL
+  - MSFT
+  - GOOGL
+  - JPM
+  - JNJ
+  - PG
+  # Long-duration bonds (~40%): max duration for deflation hedge (1)
+  - TLT
+  # Intermediate bonds (~15%): stability + income (2)
+  - IEF
+  - AGG
+  # Gold / precious metals (~7.5%): inflation hedge (2)
+  - NEM
+  - AEM
+  # Commodities / cyclicals (~7.5%): inflation hedge (2)
+  - FCX
+  - XOM
+
+defaults:
+  date_range:
+    start: "2013-01-01"
+    end: "2022-12-31"
+  max_weight: 0.20
+  monthly_deposit_eur: 200
+  min_holding_period_days: 252
+  rebalance_freq: "monthly"
+  win_criterion: "total_return"

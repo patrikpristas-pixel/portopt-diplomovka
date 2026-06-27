@@ -1,0 +1,15 @@
+# Data pipeline config (Fáza 1)
+date_range:
+  start: "2010-01-01"
+  end: "2024-12-31"
+
+# yfinance settings
+download:
+  auto_adjust: true       # Close column already adjusted for splits/dividends
+  retries: 3
+  retry_sleep_s: 2.0
+
+# Preprocessing
+preprocess:
+  forward_fill_max_days: 3   # tolerate up to 3 missing trading days; longer = NaN
+  drop_first_days: 5         # drop very first days where only 1-2 tickers have data
