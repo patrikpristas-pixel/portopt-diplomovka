@@ -23,6 +23,9 @@ dependencies = [
     "seaborn>=0.13",
     "omegaconf>=2.3",
     "loguru>=0.7",
+    "streamlit>=1.30",
+    "optuna>=3.5",
+    "altair>=5.0",
 ]
 
 [project.optional-dependencies]
