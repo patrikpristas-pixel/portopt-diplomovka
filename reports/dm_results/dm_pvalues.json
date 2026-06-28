@@ -2,153 +2,229 @@
   {
     "portfolio":"Agresivne",
     "comparison":"AI vs equal_weight",
+    "n_search":1258,
+    "mean_diff_ann_search":0.1307,
+    "dm_stat_search":2.543,
     "p_search":0.011,
-    "p_holdout":0.743,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":-0.0276,
+    "dm_stat_holdout":-0.328,
+    "p_holdout":0.743
   },
   {
     "portfolio":"Agresivne",
     "comparison":"AI vs markowitz",
+    "n_search":1258,
+    "mean_diff_ann_search":0.12,
+    "dm_stat_search":2.424,
     "p_search":0.015,
-    "p_holdout":0.691,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":-0.0343,
+    "dm_stat_holdout":-0.397,
+    "p_holdout":0.691
   },
   {
     "portfolio":"Agresivne",
     "comparison":"AI vs black_litterman",
+    "n_search":1258,
+    "mean_diff_ann_search":0.1039,
+    "dm_stat_search":2.448,
     "p_search":0.014,
-    "p_holdout":0.538,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":-0.0438,
+    "dm_stat_holdout":-0.616,
+    "p_holdout":0.538
   },
   {
     "portfolio":"Agresivne",
     "comparison":"AI vs momentum",
+    "n_search":1258,
+    "mean_diff_ann_search":0.1313,
+    "dm_stat_search":2.664,
     "p_search":0.008,
-    "p_holdout":0.759,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":-0.0308,
+    "dm_stat_holdout":-0.307,
+    "p_holdout":0.759
   },
   {
     "portfolio":"Agresivne",
     "comparison":"AI vs SPY",
+    "n_search":1258,
+    "mean_diff_ann_search":0.2329,
+    "dm_stat_search":3.667,
     "p_search":0.0,
-    "p_holdout":0.381,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":0.0772,
+    "dm_stat_holdout":0.877,
+    "p_holdout":0.381
   },
   {
     "portfolio":"Vyvazene",
     "comparison":"AI vs markowitz",
+    "n_search":1258,
+    "mean_diff_ann_search":0.123,
+    "dm_stat_search":2.308,
     "p_search":0.021,
-    "p_holdout":0.705,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":0.0254,
+    "dm_stat_holdout":0.379,
+    "p_holdout":0.705
   },
   {
     "portfolio":"Vyvazene",
     "comparison":"AI vs black_litterman",
+    "n_search":1258,
+    "mean_diff_ann_search":0.1276,
+    "dm_stat_search":2.354,
     "p_search":0.019,
-    "p_holdout":0.998,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":0.0001,
+    "dm_stat_holdout":0.002,
+    "p_holdout":0.998
   },
   {
     "portfolio":"Vyvazene",
     "comparison":"AI vs momentum",
+    "n_search":1258,
+    "mean_diff_ann_search":0.1198,
+    "dm_stat_search":2.254,
     "p_search":0.024,
-    "p_holdout":0.495,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":-0.0581,
+    "dm_stat_holdout":-0.682,
+    "p_holdout":0.495
   },
   {
     "portfolio":"Vyvazene",
     "comparison":"AI vs SPY",
+    "n_search":1258,
+    "mean_diff_ann_search":0.0853,
+    "dm_stat_search":2.265,
     "p_search":0.024,
-    "p_holdout":0.81,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":-0.0129,
+    "dm_stat_holdout":-0.24,
+    "p_holdout":0.81
   },
   {
     "portfolio":"Konzervativne",
     "comparison":"AI vs equal_weight",
+    "n_search":1258,
+    "mean_diff_ann_search":0.0812,
+    "dm_stat_search":2.625,
     "p_search":0.009,
-    "p_holdout":0.357,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":0.0482,
+    "dm_stat_holdout":0.922,
+    "p_holdout":0.357
   },
   {
     "portfolio":"Konzervativne",
     "comparison":"AI vs markowitz",
+    "n_search":1258,
+    "mean_diff_ann_search":0.1187,
+    "dm_stat_search":2.39,
     "p_search":0.017,
-    "p_holdout":0.177,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":0.0942,
+    "dm_stat_holdout":1.349,
+    "p_holdout":0.177
   },
   {
     "portfolio":"Konzervativne",
     "comparison":"AI vs black_litterman",
+    "n_search":1258,
+    "mean_diff_ann_search":0.121,
+    "dm_stat_search":2.433,
     "p_search":0.015,
-    "p_holdout":0.163,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":0.0968,
+    "dm_stat_holdout":1.394,
+    "p_holdout":0.163
   },
   {
     "portfolio":"Konzervativne",
     "comparison":"AI vs momentum",
+    "n_search":1258,
+    "mean_diff_ann_search":0.1128,
+    "dm_stat_search":2.129,
     "p_search":0.033,
-    "p_holdout":0.312,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":-0.0633,
+    "dm_stat_holdout":-1.012,
+    "p_holdout":0.312
   },
   {
     "portfolio":"Konzervativne",
     "comparison":"AI vs SPY",
+    "n_search":1258,
+    "mean_diff_ann_search":0.0812,
+    "dm_stat_search":1.437,
     "p_search":0.151,
-    "p_holdout":0.597,
-    "search_significant_0.05":false,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":0.0409,
+    "dm_stat_holdout":0.528,
+    "p_holdout":0.597
   },
   {
     "portfolio":"All-Weather",
     "comparison":"AI vs equal_weight",
+    "n_search":1258,
+    "mean_diff_ann_search":0.086,
+    "dm_stat_search":2.675,
     "p_search":0.007,
-    "p_holdout":0.993,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":-0.0005,
+    "dm_stat_holdout":-0.008,
+    "p_holdout":0.993
   },
   {
     "portfolio":"All-Weather",
     "comparison":"AI vs markowitz",
+    "n_search":1258,
+    "mean_diff_ann_search":0.1301,
+    "dm_stat_search":2.721,
     "p_search":0.007,
-    "p_holdout":0.596,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":0.0433,
+    "dm_stat_holdout":0.53,
+    "p_holdout":0.596
   },
   {
     "portfolio":"All-Weather",
     "comparison":"AI vs black_litterman",
+    "n_search":1258,
+    "mean_diff_ann_search":0.1316,
+    "dm_stat_search":2.756,
     "p_search":0.006,
-    "p_holdout":0.526,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":0.0472,
+    "dm_stat_holdout":0.634,
+    "p_holdout":0.526
   },
   {
     "portfolio":"All-Weather",
     "comparison":"AI vs momentum",
+    "n_search":1258,
+    "mean_diff_ann_search":0.1002,
+    "dm_stat_search":2.336,
     "p_search":0.02,
-    "p_holdout":0.441,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":-0.0404,
+    "dm_stat_holdout":-0.771,
+    "p_holdout":0.441
   },
   {
     "portfolio":"All-Weather",
     "comparison":"AI vs SPY",
+    "n_search":1258,
+    "mean_diff_ann_search":0.1048,
+    "dm_stat_search":2.289,
     "p_search":0.022,
-    "p_holdout":0.63,
-    "search_significant_0.05":true,
-    "holdout_significant_0.05":false
+    "n_holdout":756,
+    "mean_diff_ann_holdout":0.0301,
+    "dm_stat_holdout":0.481,
+    "p_holdout":0.63
   }
 ]

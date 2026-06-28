@@ -1,0 +1,9 @@
+﻿portfolio,regime,n_days,sharpe_ann,skewness,kurtosis,sigma_sharpe_history,sharpe_ref_ann,n_trials,DSR_pct
+Agresivne,search,1258,1.522,-0.1395,6.9356,0.0544,0.1625,400,99.9
+Agresivne,holdout,756,0.5912,-0.2064,7.2034,0.0544,0.1625,400,77.0
+Vyvazene,search,1258,1.2748,-0.1651,6.3196,0.0894,0.2472,200,98.8
+Vyvazene,holdout,756,0.3796,-0.2204,11.482,0.0894,0.2472,200,59.0
+Konzervativne,search,1258,1.2438,-0.0765,4.5338,0.0923,0.2367,110,98.7
+Konzervativne,holdout,756,0.6031,-0.167,8.4335,0.0923,0.2367,110,73.6
+All-Weather,search,1258,1.3515,-0.1967,4.7478,0.0906,0.2292,100,99.3
+All-Weather,holdout,756,0.4898,-0.2281,9.6335,0.0906,0.2292,100,67.3
