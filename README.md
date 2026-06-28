@@ -5,7 +5,7 @@ Autor: **Bc. Patrik Prístaš**, Fakulta managementu UK v Bratislave.
 
 Repozitár slúži na **overenie a reprodukciu** všetkých číselných výsledkov
 uvedených v práci. Obsahuje kompletný kód, zamknutý dátový snapshot a výstupy
-experimentov. Natrénované modely (`.pt`, ~6,4 GB) nie sú priložené — sú
+experimentov. Natrénované modely (`.pt`, ~6,4 GB) nie sú priložené, pretože sú
 deterministicky reprodukovateľné z kódu a pevného seedu.
 
 ---
@@ -52,8 +52,8 @@ streamlit run app.py
 
 ## Metodológia (zhrnutie)
 
-- **Model:** MLP softmax policy network — priamo generuje nezáporné portfóliové
-  váhy so súčtom 1 (negeneruje predikciu výnosov).
+- **Model:** MLP softmax policy network, ktorá priamo generuje nezáporné
+  portfóliové váhy so súčtom 1 (negeneruje predikciu výnosov).
 - **Walk-forward:** 12-mesačné okná, hľadanie 2013-2019, **TRUE OOS holdout**
   2020-2022 (zamknutý pred Optunou).
 - **Hyperparametre:** Optuna TPE (100-400 trialov podľa portfólia).
@@ -61,7 +61,7 @@ streamlit run app.py
   multiple testing), Diebold-Mariano test, **PBO cez CSCV**.
 - **Baseliny:** Markowitz, Black-Litterman, 1/N, Momentum (126 dní), SPY.
 
-## Hlavný empirický záver (čestný)
+## Hlavný empirický záver
 
 Rozsiahlo ladená neurónová sieť v **skutočne nevidenom holdout období
 (2020-2022) neprekonala jednoduché benchmarky** v žiadnom zo štyroch portfólií
@@ -69,8 +69,8 @@ a vykázala ~52-70 % pokles Sharpeho pomeru oproti hľadaciemu obdobiu.
 
 PBO (71-92 %) a generalization gap nezávisle **potvrdzujú silné pretrénovanie
 počas hľadania**. Kontribúciou práce nie je výkonný model, ale **metodologický
-rámec, ktorý toto pretrénovanie korektne diagnostikoval** — čo je v súlade
-s literatúrou o neefektívnosti komplexných ML modelov oproti naivnej
+rámec, ktorý toto pretrénovanie korektne diagnostikoval**, čo je v súlade
+s literatúrou o nedostatočnej výhode zložitých ML modelov oproti naivnej
 diverzifikácii.
 
 ## Poznámka k použitým nástrojom
