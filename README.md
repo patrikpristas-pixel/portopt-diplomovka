@@ -22,12 +22,19 @@ src/portopt/            jadro projektu (inštalovateľný balík)
 scripts/
   01_download_data.py   stiahnutie denných dát (yfinance)
   02_preprocess.py      log-výnosy, engineered príznaky
+  03_compute_pbo.py     výpočet PBO (CSCV) — reprodukuje čísla v práci
+  04_compute_dsr.py     výpočet DSR vrátane step-by-step vstupov
+  05_compute_dm.py      Diebold-Mariano test vrátane DM štatistík
   auto_search_v2.py     Optuna TPE hľadanie hyperparametrov
   export_vix_results.py VIX ablačná štúdia
-  03_compute_pbo.py     výpočet PBO (CSCV) — reprodukuje čísla v práci
 data/                   dátový snapshot (parquet) — 2013-2022
 portfolios/             výsledky per portfólio (trials, baseliny, váhy, výnosy)
-reports/                výstupy: VIX ablation, PBO (summary + logits + histogram)
+results_export/         čitateľné CSV tabuľky použité v práci
+reports/                výstupy: PBO, DSR, DM, VIX ablation a grafy
+  pbo_results/          PBO summary, logit CSV a lambda histogram
+  dsr_results/          DSR summary + step-by-step vstupy výpočtu
+  dm_results/           DM štatistiky, p-hodnoty, mean diff a počet pozorovaní
+  figures/              NAV, drawdown, konvergencia Optuny, alokácie a hyperparametre
 app.py                  Streamlit dashboard (interaktívne spustenie + grafy)
 ```
 
@@ -48,6 +55,14 @@ pip install -e .
 python scripts/03_compute_pbo.py
 # -> reports/pbo_results/pbo_summary.csv + lambda histogram
 
+# DSR (Deflated Sharpe Ratio) — vrátane všetkých vstupov výpočtu
+python scripts/04_compute_dsr.py
+# -> reports/dsr_results/dsr_summary.csv + dsr_stepwise.csv
+
+# Diebold-Mariano test — DM štatistika, p-hodnota, mean diff, n
+python scripts/05_compute_dm.py
+# -> reports/dm_results/dm_pvalues.csv
+
 # Interaktívny dashboard (tabuľky, NAV krivky, štatistika, per-trial detail)
 streamlit run app.py
 ```
@@ -66,6 +81,14 @@ vytvorí virtuálne prostredie, nainštaluje závislosti a spustí dashboard;
 - **Inferenčná štatistika:** stationary bootstrap CI, PSR, DSR (korekcia na
   multiple testing), Diebold-Mariano test, **PBO cez CSCV**.
 - **Baseliny:** Markowitz, Black-Litterman, 1/N, Momentum (126 dní), SPY.
+
+## Poznámka k mene NAV
+
+Všetky aktíva v experimente sú obchodované v **USD** a výsledky v diplomovej
+práci sú interpretované v amerických dolároch. Niektoré interné názvy stĺpcov
+v starších exportoch používajú historický suffix `_eur` (napr. `final_nav_eur`),
+ale ide len o názov premennej v kóde; číselné hodnoty zodpovedajú USD simulácii.
+Kurzové riziko EUR/USD nie je modelované.
 
 ## Hlavný empirický záver
 
