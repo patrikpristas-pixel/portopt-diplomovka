@@ -50,8 +50,9 @@ python scripts/03_compute_pbo.py
 streamlit run app.py
 ```
 
-Na Windowse stačí po inštalácii dvojklik na `SPUSTIT_WEB.bat`, ktorý
-dashboard spustí a otvorí v prehliadači automaticky.
+Na Windowse stačí dvojklik na `SPUSTIT_WEB.bat`. Pri prvom spustení sám
+vytvorí virtuálne prostredie, nainštaluje závislosti a spustí dashboard;
+ďalšie spustenia sú okamžité. Vyžaduje nainštalovaný Python 3.11.
 
 ## Metodológia (zhrnutie)
 
