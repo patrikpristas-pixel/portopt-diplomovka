@@ -50,6 +50,9 @@ python scripts/03_compute_pbo.py
 streamlit run app.py
 ```
 
+Na Windowse stačí po inštalácii dvojklik na `SPUSTIT_WEB.bat`, ktorý
+dashboard spustí a otvorí v prehliadači automaticky.
+
 ## Metodológia (zhrnutie)
 
 - **Model:** MLP softmax policy network, ktorá priamo generuje nezáporné
