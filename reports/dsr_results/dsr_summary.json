@@ -1,0 +1,30 @@
+[
+  {
+    "portfolio":"Agresivne",
+    "winning_trial":285,
+    "n_trials":400,
+    "DSR_search_pct":99.9,
+    "DSR_holdout_pct":77.0
+  },
+  {
+    "portfolio":"Vyvazene",
+    "winning_trial":196,
+    "n_trials":200,
+    "DSR_search_pct":98.8,
+    "DSR_holdout_pct":59.0
+  },
+  {
+    "portfolio":"Konzervativne",
+    "winning_trial":24,
+    "n_trials":110,
+    "DSR_search_pct":98.7,
+    "DSR_holdout_pct":73.6
+  },
+  {
+    "portfolio":"All-Weather",
+    "winning_trial":40,
+    "n_trials":100,
+    "DSR_search_pct":99.3,
+    "DSR_holdout_pct":67.3
+  }
+]
