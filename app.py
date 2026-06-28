@@ -1088,7 +1088,7 @@ def _format_trial_option(t: int, df: pd.DataFrame) -> str:
             _status = "❌ prehra na holdoute"
         if pd.isna(nav_v):
             return f"Pokus #{int(t)} | {_status}"
-        return f"Pokus #{int(t)} | {_status} | {nav_v:,.0f} €".replace(",", " ")
+        return f"Pokus #{int(t)} | {_status} | {nav_v:,.0f} USD".replace(",", " ")
     except Exception:
         return f"Pokus #{t}"
 
@@ -1984,6 +1984,17 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+st.info(
+    "ℹ️ **Poznámka k aplikácii:** Táto aplikácia je interaktívny vývojový nástroj, "
+    "ktorý vznikal iteratívne počas celého výskumu. To, čo je v nej zobrazené, nemusí "
+    "presne zodpovedať finálnej verzii použitej v diplomovej práci. Niektoré príznaky a "
+    "konfigurácie (napríklad VIX sentiment vstup) boli počas vývoja testované a do "
+    "finálneho modelu nakoniec nezaradené, a niektoré finálne výpočty (napríklad PBO) sa "
+    "robia samostatnými skriptami v priečinku `scripts/`. Autoritatívnym zdrojom výsledkov "
+    "je diplomová práca spolu s uloženými dátami (`portfolios/`, `reports/`) a "
+    "reprodukovateľnými skriptami. Dôležité zistenia z dát naprieč jednotlivými verziami "
+    "boli priebežne ukladané."
+)
 st.markdown('<div id="sekcia-vysvetlivky"></div>', unsafe_allow_html=True)
 with st.expander("ℹ️ Vysvetlivky — ako funguje AI model", expanded=False):
     st.markdown(
@@ -2221,7 +2232,7 @@ with picker_block:
                             <div class="setup-meta-card">
                                 <div class="setup-meta-label">Limity</div>
                                 <div class="setup-meta-value">max {int(FIXED_MAX_WEIGHT * 100)}% / aktívum</div>
-                                <div class="setup-meta-note">Mesačný vklad {int(FIXED_MONTHLY_DEPOSIT)} EUR a strop koncentrácie držia simuláciu realistickú.</div>
+                                <div class="setup-meta-note">Mesačný vklad {int(FIXED_MONTHLY_DEPOSIT)} USD a strop koncentrácie držia simuláciu realistickú.</div>
                             </div>
                             <div class="setup-meta-card">
                                 <div class="setup-meta-label">Jeden pokus</div>
@@ -2503,7 +2514,7 @@ st.markdown('<div id="sekcia-prehlad"></div>', unsafe_allow_html=True)
 results_block = st.container(border=True)
 _BEST_BY_CRITERION = {
     "sharpe": ("Najlepší Sharpe", "sharpe", "{:.5f}"),
-    "total_return": ("Najvyššia čistá hodnota aktív", "final_nav_eur", "{:,.0f}€"),
+    "total_return": ("Najvyššia čistá hodnota aktív", "final_nav_eur", "{:,.0f} USD"),
     "beat_benchmarks": ("Najlepší náskok", "objective", "{:+.3f}"),
 }
 _best_label, _best_key, _best_fmt = _BEST_BY_CRITERION.get(
@@ -2515,6 +2526,15 @@ with results_block:
     st.caption(
         "Najprv vidíš stručný obraz toho, ako sa AI darí naprieč všetkými pokusmi: "
         "koľko ich už prebehlo, či AI vyhráva častejšie a či sa jej výsledky posúvajú."
+    )
+    st.info(
+        "💱 **Mena a kurzové riziko.** Všetky aktíva v portfóliách sú americké "
+        "(NYSE/NASDAQ, denominované v **USD**), vrátane bondových ETF-ov a benchmarku SPY. "
+        "Simulácia ráta v **USD** a kurzové riziko EUR/USD ignoruje — všetky stratégie sú "
+        "tým rovnako ovplyvnené, takže **relatívne porovnanie ostáva platné**. "
+        "Slovenský investor musí pri reálnom investovaní rátať aj s **kolísaním EUR/USD** "
+        "(typicky ±5–15 % ročne), ktoré tu nie je zachytené.",
+        icon="⚠️",
     )
     status_col, count_col, best_col, won_col, trend_col = st.columns(5)
     with status_col:
@@ -2577,7 +2597,7 @@ with results_block:
                 pct = (last_mean - prev_mean) / denom * 100.0
                 arrow = "📈" if pct > 0 else ("📉" if pct < 0 else "➡️")
                 delta_str = (
-                    f"Δ {last_mean - prev_mean:+,.0f}€"
+                    f"Δ {last_mean - prev_mean:+,.0f} USD"
                     if _best_key == "final_nav_eur"
                     else f"Î” {last_mean - prev_mean:+.3f}"
                 )
@@ -2783,7 +2803,7 @@ from portopt.evaluation.metrics import total_return as fn_tr
 
 def all_metrics(returns_series: pd.Series, nav_series: pd.Series) -> dict:
     return {
-        "Čistá hodnota aktív (€)": float(nav_series.iloc[-1]),
+        "Čistá hodnota aktív (USD)": float(nav_series.iloc[-1]),
         "Total ret": fn_tr(returns_series),
         "Ann ret": annualized_return(returns_series),
         "Ann vol": annualized_volatility(returns_series),
@@ -2806,7 +2826,7 @@ metrics_df.index = [PRETTY.get(i, i) for i in metrics_df.index]
 
 # Direction map: which way is "better"
 direction = {
-    "Čistá hodnota aktív (€)": 1, "Total ret": 1, "Ann ret": 1,
+    "Čistá hodnota aktív (USD)": 1, "Total ret": 1, "Ann ret": 1,
     "Sharpe": 1, "Sortino": 1, "Calmar": 1,
     "Ann vol": -1, "Max DD": 1,  # max_dd is negative; less-negative is better → "max" picks best
 }
@@ -2832,7 +2852,7 @@ def style_table(df: pd.DataFrame) -> pd.DataFrame:
 
 styled_metrics = (
     metrics_df.style.format({
-        "Čistá hodnota aktív (€)": "{:,.0f}",
+        "Čistá hodnota aktív (USD)": "{:,.0f}",
         "Total ret": "{:.1%}", "Ann ret": "{:.1%}", "Ann vol": "{:.1%}",
         "Sharpe": "{:.5f}", "Sortino": "{:.4f}", "Calmar": "{:.4f}",
         "Max DD": "{:.1%}",
@@ -3291,7 +3311,7 @@ else:
 nav_card = compare_block.container()
 with nav_card:
     st.markdown('<div class="nav-card-marker"></div>', unsafe_allow_html=True)
-    st.markdown(f"**📈 Vývoj čistej hodnoty aktív (€) — portfólio: {portfolio.display_name}**")
+    st.markdown(f"**📈 Vývoj čistej hodnoty aktív (USD) — portfólio: {portfolio.display_name}**")
 _nav_chart_cols = [c for c in b_nav_aligned.columns if _is_shown_baseline(c)]
 nav_full = pd.concat([ai_nav.rename("ai"), b_nav_aligned[_nav_chart_cols]], axis=1)
 nav_plot = nav_full.copy()
@@ -3391,7 +3411,7 @@ if _nav_phase_rows:
             .encode(
                 x=alt.X("date_start:T", title=None, scale=_nav_x_scale),
                 x2="date_end:T",
-                y=alt.Y("y0:Q", title="Čistá hodnota aktív (€)", scale=_nav_y_scale),
+                y=alt.Y("y0:Q", title="Čistá hodnota aktív (USD)", scale=_nav_y_scale),
                 y2="y1:Q",
                 color=alt.Color(
                     "phase:N",
@@ -3417,7 +3437,7 @@ selector_dates = pd.DataFrame({"date": sorted(pd.to_datetime(nav_long["date"].dr
 
 base = alt.Chart(nav_long).encode(
     x=alt.X("date:T", title=None, scale=_nav_x_scale),
-    y=alt.Y("nav_eur:Q", title="Čistá hodnota aktív (€)", scale=_nav_y_scale),
+    y=alt.Y("nav_eur:Q", title="Čistá hodnota aktív (USD)", scale=_nav_y_scale),
     color=alt.Color(
         "pretty:N",
         scale=alt.Scale(domain=_nav_color_domain, range=_nav_color_range),
@@ -3464,7 +3484,7 @@ hover_labels = (
     .mark_text(align="left", dx=7, dy=-7, fontSize=11, fontWeight="bold")
     .encode(
         x=alt.X("date:T", title=None, scale=_nav_x_scale),
-        y=alt.Y("nav_eur:Q", title="Čistá hodnota aktív (€)", scale=_nav_y_scale),
+        y=alt.Y("nav_eur:Q", title="Čistá hodnota aktív (USD)", scale=_nav_y_scale),
         text=alt.Text("nav_eur:Q", format=",.0f"),
         color=alt.Color(
             "pretty:N",
@@ -3488,7 +3508,7 @@ hover_tooltips = (
         tooltip=[
             alt.Tooltip("pretty:N", title="stratégia"),
             alt.Tooltip("date:T", title="dátum"),
-            alt.Tooltip("nav_eur:Q", format=",.0f", title="Čistá hodnota aktív (€)"),
+            alt.Tooltip("nav_eur:Q", format=",.0f", title="Čistá hodnota aktív (USD)"),
         ]
     )
     .transform_filter(nearest)
