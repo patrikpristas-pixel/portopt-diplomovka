@@ -33,6 +33,8 @@ app.py                  Streamlit dashboard (interaktívne spustenie + grafy)
 
 ## Inštalácia
 
+**Požiadavka: Python 3.11** (projekt je viazaný na `>=3.11,<3.12`).
+
 ```bash
 python -m venv .venv
 .venv/Scripts/activate        # Windows
