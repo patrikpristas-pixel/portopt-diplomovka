@@ -1,0 +1,20 @@
+﻿portfolio,comparison,p_search,p_holdout,search_significant_0.05,holdout_significant_0.05
+Agresivne,AI vs equal_weight,0.011,0.743,True,False
+Agresivne,AI vs markowitz,0.015,0.691,True,False
+Agresivne,AI vs black_litterman,0.014,0.538,True,False
+Agresivne,AI vs momentum,0.008,0.759,True,False
+Agresivne,AI vs SPY,0.0,0.381,True,False
+Vyvazene,AI vs markowitz,0.021,0.705,True,False
+Vyvazene,AI vs black_litterman,0.019,0.998,True,False
+Vyvazene,AI vs momentum,0.024,0.495,True,False
+Vyvazene,AI vs SPY,0.024,0.81,True,False
+Konzervativne,AI vs equal_weight,0.009,0.357,True,False
+Konzervativne,AI vs markowitz,0.017,0.177,True,False
+Konzervativne,AI vs black_litterman,0.015,0.163,True,False
+Konzervativne,AI vs momentum,0.033,0.312,True,False
+Konzervativne,AI vs SPY,0.151,0.597,False,False
+All-Weather,AI vs equal_weight,0.007,0.993,True,False
+All-Weather,AI vs markowitz,0.007,0.596,True,False
+All-Weather,AI vs black_litterman,0.006,0.526,True,False
+All-Weather,AI vs momentum,0.02,0.441,True,False
+All-Weather,AI vs SPY,0.022,0.63,True,False
