@@ -35,6 +35,7 @@ reports/                výstupy: PBO, DSR, DM, VIX ablation a grafy
   dsr_results/          DSR summary + step-by-step vstupy výpočtu
   dm_results/           DM štatistiky, p-hodnoty, mean diff a počet pozorovaní
   figures/              NAV, drawdown, konvergencia Optuny, alokácie a hyperparametre
+screenshots/            screenshoty spustenia skriptov v príkazovom riadku
 app.py                  Streamlit dashboard (interaktívne spustenie + grafy)
 ```
 
@@ -66,6 +67,9 @@ python scripts/05_compute_dm.py
 # Interaktívny dashboard (tabuľky, NAV krivky, štatistika, per-trial detail)
 streamlit run app.py
 ```
+
+Screenshoty z príkazového riadku, ktoré dokumentujú spustenie reprodukčných
+skriptov a generovanie výstupov, sú uložené v `screenshots/`.
 
 Na Windowse stačí dvojklik na `SPUSTIT_WEB.bat`. Pri prvom spustení sám
 vytvorí virtuálne prostredie, nainštaluje závislosti a spustí dashboard;
